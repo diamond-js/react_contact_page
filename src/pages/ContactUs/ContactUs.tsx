@@ -23,8 +23,7 @@ const ContactUs: FC<Props> = () => {
       phone_number: Yup.string().required("Please Enter Your Phone Number"),
       how_you_found_us: Yup.string().required("Please How Did You Find Us"),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: () => {
       setTimeout(() => {
         formik.setSubmitting(false);
         setShowSubmittedModal(true);
