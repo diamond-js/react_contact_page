@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode, useId } from "react";
 import "./input_block.css";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
@@ -7,11 +7,13 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 
 const Input = ({ errorMsg, ...inputAttributes }: Props) => {
   const { placeholder, ...remainingInputAttributes } = inputAttributes;
+  const randomId = useId();
+  const id = remainingInputAttributes.id || "input__box" + randomId;
   return (
     <div className="input" data-error={errorMsg && "true"}>
       <div className="input__input-box">
         <label
-          htmlFor={remainingInputAttributes.id}
+          htmlFor={id}
           style={{ display: remainingInputAttributes.value ? "none" : "" }}
         >
           {placeholder}{" "}
@@ -20,7 +22,7 @@ const Input = ({ errorMsg, ...inputAttributes }: Props) => {
           </span>
         </label>
 
-        <input {...remainingInputAttributes} />
+        <input {...remainingInputAttributes} id={id} />
       </div>
       {errorMsg && <p className="input__error-msg">{errorMsg}</p>}
     </div>
