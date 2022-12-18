@@ -21,9 +21,8 @@
   justify-content: center;
   align-items: center;
   padding: var(--space-padding-x);
-  height: 100%;
+  height: auto;
   margin-bottom: 3.125rem;
-  /* overflow: auto; */
 }
 
 .contact-page__form-section--content-wrapper {
@@ -157,6 +156,7 @@
 
   .contact-page__form-section {
     --space-padding-x: 2rem;
+    height: 100%;
     overflow: auto;
     margin-bottom: 0;
   }
