@@ -1,0 +1,49 @@
+/* 
+   || BLOCKS AND COMPONENTS
+*/
+
+/* 
+   -- INPUT BLOCK
+*/
+
+.input__input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input__input-box input {
+  min-height: 50px;
+  max-height: 50px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #e0e0e0;
+  display: block;
+  width: 100%;
+  outline-color: hsla(348, 67%, 85%, 0.7);
+}
+.input__input-box label {
+  position: absolute;
+  left: 1.25rem;
+  color: #828282;
+}
+
+.input[data-error="true"] .input__input-box input {
+  border-color: var(--clr--red);
+}
+
+.input__error-msg {
+  color: var(--clr--red);
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.input__error-msg::before {
+  content: "";
+  background-color: var(--clr--red);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}

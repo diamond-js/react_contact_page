@@ -1,0 +1,24 @@
+/* 
+   || BLOCKS AND COMPONENTS
+*/
+
+/* 
+   -- BUTTON BLOCK
+*/
+
+.btn {
+  background-color: var(--clr--red);
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  color: var(--clr--white);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}

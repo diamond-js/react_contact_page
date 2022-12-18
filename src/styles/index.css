@@ -1,0 +1,17 @@
+:root {
+  --clr--red: hsla(348, 67%, 60%, 1);
+  --clr--white: hsla(0, 0%, 100%, 1);
+  --clr--dark-blue: hsla(200, 50%, 20%, 1);
+  --clr--black: hsla(0, 0%, 0%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+}
